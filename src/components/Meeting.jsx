@@ -1,6 +1,6 @@
 import React from "react";
 import { InlineWidget } from "react-calendly";
-const Candi = () => {
+const Meeting = () => {
   return (
     <div className=" h-48">
       <InlineWidget
@@ -17,4 +17,4 @@ const Candi = () => {
     </div>
   );
 };
-export default Candi;
+export default Meeting;

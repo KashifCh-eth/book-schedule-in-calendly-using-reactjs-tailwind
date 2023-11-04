@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Candi from "../components/candi";
-import Title from "../components/Title";
+import Title from "../components/Title.jsx";
 import { SocialIcon } from "react-social-icons";
-import Det from "../components/Det";
-import Contact from "../components/Contact";
+import Det from "../components/Det.jsx";
+import Contact from "../components/Contact.jsx";
+import Meeting from "../components/Meeting.jsx";
 
 function Home() {
   return (
@@ -53,7 +53,7 @@ function Home() {
       </div>
       <div className="p-4 text-center font-semibold">
         <p>Let's discuss your project 🌀. </p>
-        <Candi />
+         <Meeting />
       </div>
     </div>
   );
