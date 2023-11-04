@@ -4,8 +4,24 @@ import { SocialIcon } from "react-social-icons";
 import Det from "../components/Det.jsx";
 import Contact from "../components/Contact.jsx";
 import Meeting from "../components/Meeting.jsx";
+import MeetPop from "../components/MeetPop.jsx";
 
 function Home() {
+  const [ispop, setPop] = useState(false);
+
+  const meetpop = () => {
+    if (window.innerWidth < 480) {
+      console.log(window.innerWidth);
+      setPop(true);
+    } else {
+      setPop(false);
+    }
+  };
+
+  useEffect(() => {
+    meetpop();
+  }, {});
+
   return (
     <div className=" flex justify-around text-center max-md:flex-col max-md:justify-center">
       <div className=" flex-shrink justify-center">
@@ -14,6 +30,7 @@ function Home() {
         </p>
         <Title />
         <Det />
+        {ispop && <MeetPop />}
         <div className="flex flex-col">
           <p className="mt-8 font-semibold w-2/4 m-auto">
             Join (<span className="text-blue-500">social media</span>) community
@@ -47,13 +64,17 @@ function Home() {
               style={{ width: "40px", margin: "20px" }}
             />
           </div>
-
-       
         </div>
       </div>
       <div className="p-4 text-center font-semibold">
         <p>Let's discuss your project 🌀. </p>
-         <Meeting />
+        {ispop ? (
+          <></>
+        ) : (
+          <>
+            <Meeting />
+          </>
+        )}
       </div>
     </div>
   );
