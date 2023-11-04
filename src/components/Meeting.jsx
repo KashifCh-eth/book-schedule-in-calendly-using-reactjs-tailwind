@@ -7,11 +7,12 @@ const Meeting = () => {
         url="https://calendly.com/kashi-dev96/meetingwithkashif?hide_event_type_details=1&hide_gdpr_banner=1"
         styles={{
           height: "800px",
-          width:"500px",
+          width:"400px",
           padding:"10px",
           overflow:"hidden",
           overflowy: "hidden", /* Hide vertical scrollbar */
-          overflowx: "hidden", /* Hide horizontal scrollbar */
+          overflowx: "hidden", 
+          overflow:"hidden",
         }}
       />
     </div>
